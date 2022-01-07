@@ -1,0 +1,10 @@
+version: "2"
+services:
+  wmbusmeters:
+    image: weetmuts/wmbusmeters
+    container_name: wmbusmeters
+    restart: always
+    volumes:
+      - /opt/wmbusmeters:/wmbusmeters_data
+      - /etc/localtime:/etc/localtime:ro
+      - /dev/:/dev/
